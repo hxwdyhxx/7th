@@ -1,0 +1,119 @@
+.footer {
+    padding: 90px 20px;
+    border-top: 1px solid #e4e5e9;
+
+    h2 {
+        margin: 0 auto;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    ul {
+        text-align: center;
+        line-height: 1.4;
+        margin-top: 40px;
+
+        @include desktop {
+            margin-top: 30px;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 0 10px;
+
+            p, a {
+                font-size: 14px;
+                font-weight: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #444;
+            }
+            b {
+                font-weight: 600;
+                color: #111;
+            }
+        }
+    }
+
+    .site-wrap {
+        &.active {
+            .btn-site {
+                .open {
+                    display: none;
+                }
+                .close {
+                    display: block;
+                }
+            }
+
+            .site-box {
+                visibility: visible;
+                opacity: 1;
+                pointer-events: all;
+                transition: .3s;
+            }
+        }
+    }
+
+    .btn-site {
+        padding: 7px 0;
+        border-radius: 21px;
+        background-color: #f2f2f3;
+        font-size: 13px;
+        font-weight: normal;
+        color: #444;
+        width: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            margin-left: 16px;
+        }
+
+        .open {
+            display: block;
+        }
+
+        .close {
+            display: none;
+        }
+    }
+
+    .site-box {
+        border-radius: 13px;
+        border: solid 1px #e4e5e9;
+        background-color: #fff;
+        padding: 13px 0;
+        position: absolute;
+        width: 130px;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        bottom: 36px;
+
+        a {
+            padding: 7px 0 7px 17px;
+            font-size: 13px;
+            color: #444;
+            font-weight: normal;
+            text-align: left;
+            transition: .3s;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+    }
+
+    .copyrights {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 13px;
+        font-weight: normal;
+        color: #999;
+    }
+}

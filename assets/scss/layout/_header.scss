@@ -1,0 +1,113 @@
+.header {
+    width: 100%;
+    height: 94px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+    border-bottom: 1px solid #e4e5e9;
+
+
+    &.on {
+        height: 62px;
+    }
+
+    .gnb {
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &-item {
+            position: relative;
+            padding-right: 10px;
+
+            a {
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: normal;
+                color: #111;
+                transition: .3s;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                right: 0;
+                border-radius: 50%;
+                background: #e60012;
+                width: 6px;
+                height: 6px;
+                opacity: 0;
+                transition: .3s;
+            }
+
+            &:hover {
+                a {
+                    color: #e60012;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.cart-area {
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    padding: 11px 25px;
+    background-color: #222;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    transition: .3s;
+
+
+    span {
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 12px;
+            background: url(../images/arrow-right.svg) no-repeat center;
+
+            margin-left: 12px;
+        }
+    }
+}
+
+.mobile-area {
+    display: none;
+    // font-size: 17px;
+    // font-weight: 500;
+    // color: #fff;
+    // padding: 11px 25px;
+    // background-color: #222;
+    // border-radius: 300px;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // align-items: center;
+    // line-height: 1;
+    // transition: .3s;
+}

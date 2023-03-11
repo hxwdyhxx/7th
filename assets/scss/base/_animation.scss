@@ -1,0 +1,156 @@
+@keyframes pulse {
+    0% {
+        transform: scaleX(1)
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+.animate-pulse {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out
+}
+
+
+.animation-box {
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+
+
+    90% {
+        opacity: 1;
+        transform: translate(-50%, 27px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 27px);
+    }
+}
+
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    53%,
+    to {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transform: translateZ(0)
+    }
+
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -30px, 0) scaleY(1.1)
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: translate3d(0, -15px, 0) scaleY(1.05)
+    }
+
+    80% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transform: translateZ(0) scaleY(.95)
+    }
+
+    90% {
+        transform: translate3d(0, -4px, 0) scaleY(1.02)
+    }
+}
+
+.animate-bounce {
+    animation-name: bounce;
+    transform-origin: center bottom
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.fade-in {
+    animation-name: fade-in
+}
+
+@keyframes icon-bounce {
+    0% {
+        transform: translateY(40px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(40px);
+    }
+}
+
+
+@keyframes fade-inup {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+.fade-inup {
+    animation-name: fade-inup;
+}
+
+@keyframes circle-scale {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0.5)
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2)
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1)
+    }
+}
+
+@keyframes icon-scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
