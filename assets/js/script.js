@@ -235,7 +235,7 @@ $(function(){
     const swiper = new Swiper("#adSlide", {
         loop: true,
         autoplay: {
-            delay: 500,
+            delay: 700,
             disableOnInteraction: false
 
           },
