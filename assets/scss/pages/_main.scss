@@ -339,11 +339,20 @@
 
             &.left-hand {
                 left: -26%;
+                top: 15px;
+
+                @include mobile {
+                    top: 10px;
+                }
 
             }
 
             &.right-hand {
-                right: -25%
+                right: -25%;
+                top: 15px;
+                @include mobile {
+                    top: 10px;
+                }
             }
         }
     }
@@ -976,7 +985,7 @@
                     border-radius: 50%;
                     top: 0;
                     right: 0;
-                    background-color: #3b89ff;
+                    background-color: #e60012;
                 }
             }
 
@@ -1070,9 +1079,9 @@
             padding: 0;
 
             &:checked {
-                &+label::before {
-                    background: #f00;
-                }
+                // &+label::before {
+                //     background: #f00;
+                // }
             }
         }
 
@@ -1131,7 +1140,7 @@
         width: 220px;
         height: 66px;
         display: block;
-        background-color: #3b89ff;
+        background-color: #e60012;
         border-radius: 300px;
         font-size: 22px;
         font-weight: 500;
